@@ -1,0 +1,262 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css?family=Overpass:200,300,400,600,700');
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700');
+
+/* common =================================================================================================================*/
+
+*,*::before,*::after {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	outline: 0;
+	background: none;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	font: inherit;
+	font-family: inherit;
+	font-size: 100%;
+	font-style: inherit;
+	font-weight: inherit;
+	text-decoration: none;
+	vertical-align: baseline;
+	-webkit-font-feature-settings: "palt";
+	font-feature-settings: "palt";
+}
+
+html {
+	height: 100%;
+	font-size: 62.5%;
+	overflow-x: hidden;
+}
+
+body {
+	margin: 0;
+	position: relative;
+	font-size: 14px;
+	font-size: 1.4rem;
+	line-height: 1;
+	color: #666666;
+	letter-spacing: 0.5px;
+	background: #fff;
+	word-wrap: break-word;
+	overflow-wrap: break-word;
+	-webkit-text-size-adjust: 100%;
+	text-size-adjust: 100%;
+	font-family: 'Overpass', "游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴシック Pro", "Hiragino Kaku Gothic Pro", 'メイリオ', Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-smoothing: antialiased;
+	z-index: 0;
+overflow: visible;
+}
+
+img {
+	vertical-align: top;
+	width: auto;
+	height: auto;
+	max-width: 100%;
+	max-height: 100%;
+	border: 0;
+	-ms-interpolation-mode: bicubic;
+}
+	img::after {
+		clear: both;
+		height: 0;
+		line-height: 0;
+		display: block;
+		content: "";
+	}
+
+a,a:link,a:visited,a:hover,a:active {
+	text-decoration: none;
+	outline: 0;
+	cursor: pointer;
+	-webkit-tap-highlight-color: transparent rgba(0, 0, 0, 0);
+	-moz-tap-highlight-color: transparent rgba(0, 0, 0, 0);
+	tap-highlight-color: transparent rgba(0, 0, 0, 0);
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+ol,ul,li {
+  list-style: none;
+}
+	ul::after {
+		clear: both;
+		height: 0;
+		line-height: 0;
+		display: block;
+		content: "";
+	}
+
+#container {
+	width: 100%;
+	margin: 0 auto;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-justify-content: center;
+	justify-content: center;
+	-webkit-align-content: center;
+	align-content: center;
+	-webkit-flex-flow: row wrap;
+	flex-flow: row wrap;
+	-webkit-align-items: center;
+	align-items: center;
+	padding: 10px;
+}
+
+h1 {
+	font-size: 1.8rem;
+	text-align: center;
+	width: 100%;
+	margin: 0 auto 20px;
+}
+
+form {
+	width: 100%;
+	margin: 0px auto 30px;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-justify-content: flex-start;
+	justify-content: flex-start;
+	-webkit-align-content: center;
+	align-content: center;
+	-webkit-flex-flow: row wrap;
+	flex-flow: row wrap;
+	-webkit-align-items: center;
+	align-items: center;
+	padding: 0px;
+}
+
+.inputArea {
+	width: 100%;
+	max-width: 300px;
+	margin: 0px auto 0px;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-justify-content: flex-start;
+	justify-content: flex-start;
+	-webkit-align-content: center;
+	align-content: center;
+	-webkit-flex-flow: row wrap;
+	flex-flow: row wrap;
+	-webkit-align-items: center;
+	align-items: center;
+	padding: 10px;
+	background: #f5f5f5;
+	border-radius: 10px;
+	border: 2px solid #f0f0f0;
+}
+
+.inputArea input[type="text"] {
+	width: 100%;
+	border-radius: 10px;
+	border: 0px;
+	background: #fff;
+	padding: 10px 10px 8px;
+	border: 2px solid #f0f0f0;
+}
+
+ul {
+	width: 100%;
+	max-width: 500px;
+	margin: 0px auto 0px;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-justify-content: flex-start;
+	justify-content: flex-start;
+	-webkit-align-content: center;
+	align-content: center;
+	-webkit-flex-flow: row wrap;
+	flex-flow: row wrap;
+	-webkit-align-items: flex-start;
+	align-items: flex-start;
+}
+
+li {
+	width: calc((100% - 20px) / 2);
+	margin: 0 20px 20px 0;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-justify-content: flex-start;
+	justify-content: flex-start;
+	-webkit-align-content: center;
+	align-content: center;
+	-webkit-flex-flow: row wrap;
+	flex-flow: row wrap;
+	-webkit-align-items: center;
+	align-items: center;
+	position: relative;
+}
+
+	li:nth-of-type(even) {
+		margin-right: 0;
+	}
+	li:nth-last-of-type(-n + 2) {
+		margin-bottom: 0;
+	}
+
+li label {
+	position: relative;
+	display: inline-block;
+	cursor: pointer;
+	font-size: 1.4rem;
+	padding: 0 10px 0 25px;
+	width: calc(100% - 30px);
+	margin: 0 10px 0 0;
+}
+
+li label input[type="checkbox"] {
+	display: none;
+	margin: 0;
+}
+
+li label span::before {
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 0;
+	display: block;
+	width: 20px;
+	height: 20px;
+	margin-top: -11px;
+	background: #f7f7f7;
+	border: 2px solid #cfcfcf;
+	border-radius: 5px;
+}
+
+li label input[type="checkbox"]:checked + span {
+	color: #dd0000;
+	text-decoration: line-through;
+}
+
+li label input[type="checkbox"]:checked + span::after {
+	border-radius: 3px;
+	content: "";
+	position: absolute;
+	top: 50%;
+	display: block;
+	left: 5px;
+	width: 10px;
+	height: 10px;
+	margin-top: -6px;
+	background: #dd0000;
+}
+
+.deleteTodo {
+	width: 20px;
+	height: 20px;
+	margin: 0;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-justify-content: center;
+	justify-content: center;
+	-webkit-align-content: center;
+	align-content: center;
+	-webkit-flex-flow: row wrap;
+	flex-flow: row wrap;
+	-webkit-align-items: center;
+	align-items: center;
+	font-size: 1.8rem;
+	cursor: pointer;
+}
