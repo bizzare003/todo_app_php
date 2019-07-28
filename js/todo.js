@@ -36,16 +36,16 @@ $(function () {
 			title: title,
 			mode: 'create',
 			token: $('#token').val()
-		}, function (res) {
-			var $newLi = $('<li>', {class:'list' + res.id});
+		}).done ((res) => {
+			var $newLi = $('<li>', { class: 'list' + res.id});
 			$newLi.attr('data-id', res.id);
 			$newLi.prepend(
 				$('<label></label>')
-					.prepend(
-						$('<input>', {type: 'checkbox', class: 'updateTodo'}),
-						$('<span></span>', {class: 'todoTitle', text: title})
-					)
-			).append($('<div>', { class: 'deleteTodo',text: 'x'}));
+				.prepend(
+					$('<input>', { type: 'checkbox', class: 'updateTodo'}),
+					$('<span>', { text: title, class: 'todoTitle'})
+				)
+			).append($('<div>', { class: 'deleteTodo'}));
 			$('#todoUl').prepend($newLi.fadeIn(1000, function() {
 				location.reload();
 			}));
