@@ -1,4 +1,5 @@
 <?php
+// test
 	namespace MyApp;
 	class Todo {
 		private $_db;
